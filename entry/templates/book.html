@@ -1,0 +1,28 @@
+<title>Booking page</title>
+
+
+Ticket Booking
+<form method="POST">
+    {%csrf_token%}
+    Name:<input type="text" name="name" required><br>
+    Age:<input type="text" name="age"><br>
+    Mobile:<input type="text" name="mob" maxlength="10"><br>
+    Email:<input type="text" name="email">&emsp;&emsp;&emsp;
+    Password:<input type="password" name="psd" required><br>
+    Country:<input type="text" name="cntry">&emsp;&emsp;
+    City:<input type="text" name="city"><br>
+    Id_proof:<input type="text" name="proof">&emsp;&emsp;
+    Id_number:<input type="text" name="num"><br>
+    Members:<input type="number" name="mem"><br>
+    Vehical_no:<input type="text" name="vehical"><br>
+    Date:<input type="date" name="date">&emsp;&emsp;
+    Time:<select name="time">
+        <option>--Select--</option>
+        <option>06:30 AM</option>
+        <option>11:15 AM</option>
+        <option>02:25 PM</option>
+        <option>04:30 PM</option>
+        </select><br>
+    <input type="submit" value="Book">   
+</form>
+    

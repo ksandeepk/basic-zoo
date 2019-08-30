@@ -1,0 +1,19 @@
+<table border="3"> 
+        <tr>
+            <th>Ticket_id</th>
+            <th>User_name</th>
+            <th>Toatal Members</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>    
+        {% for b in tk %} 
+        <tr> 
+            <td>{{b.ticket_id}}</td>
+            <td>{{b.name}}</td>
+            <td>{{b.vtotal}}</td>
+            <td>{{b.date}}</td> 
+            <td>{{b.time}}</td>
+        </tr> 
+        
+        {% endfor%}
+</table>   

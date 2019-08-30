@@ -1,0 +1,24 @@
+<div><marquee animation="15s" behavior="scroll" direction="up" onmouseover="this.stop();" onmouseout="this.start();">
+                <img src="https://www.chessington.com/images/main-images/2018/mobile/tiger.jpg" width="180" height="180">
+</marquee>
+</div>
+<div>
+<form method="POST">
+    {%csrf_token%}
+    email:<input type="email" name="email" required>
+    Password:<input type="password" name="psd">
+    <input type="submit" value="submit">
+    
+</form>
+</div>
+<div>
+        <table border="8" width="50%" height="40%">
+                {%for tkt in tkt%}
+                <tr><th>Ticket_id</th><td>&emsp;&emsp;{{tkt.ticket_id}}</td></tr>
+                <tr><th>Name</th><td>&emsp;&emsp;{{tkt.name}}</td></tr>
+                <tr><th>Date</th><td>&emsp;&emsp;{{tkt.date}}</td></tr>
+                <tr><th>Time</th><td>&emsp;&emsp;{{tkt.time}}</td></tr>
+                <tr><th>Members</th><td>&emsp;&emsp;{{tkt.vtotal}}</td></tr>
+                {%endfor%}
+        </table>
+</div>
